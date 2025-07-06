@@ -31,6 +31,7 @@ boxes.forEach((box)=>{
             turn=true;
         }
         count++;
+        checkwinner();
         console.log(count);
         if(count===9){
             msgContainer.classList.remove('hide');
@@ -39,7 +40,7 @@ boxes.forEach((box)=>{
             return 0;
         }
         box.disabled=true;
-        checkwinner();
+        
     });
 });
 
