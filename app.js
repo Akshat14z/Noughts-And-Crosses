@@ -37,6 +37,7 @@ boxes.forEach((box)=>{
             msgContainer.classList.remove('hide');
             msg.innerText='Game is Draw';
             disableboxes();
+            count=0; //reset count to 0 when game ends
             return 0;
         }
         box.disabled=true;
@@ -82,6 +83,7 @@ const checkwinner = () => {
         if(pos1val !="" && pos2val !="" && pos3val !=""){
             if(pos1val===pos2val && pos2val===pos3val){
                 showwinner(pos1val);
+                count=0; //reset count to 0 when game ends
             }
         }
     }
@@ -89,6 +91,7 @@ const checkwinner = () => {
 
 const resetgame = () => {
     turn=true;
+    count=0;
     enableboxes();
     msgContainer.classList.add("hide");
 
